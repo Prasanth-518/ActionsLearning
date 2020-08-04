@@ -1,6 +1,7 @@
 name: PullReq
 on: 
   pull_request:
+    type: [labeled]
     branches: [master]
 jobs:
   Ubuntu_machine:
@@ -8,10 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Runs on ubuntu
-      run: lsb_release -a
-  Mac_machine:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: runs on mac
       run: lsb_release -a 
