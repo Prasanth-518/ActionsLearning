@@ -1,0 +1,15 @@
+name: PullReq
+on: 
+  pull_request:
+    [master]
+jobs:
+  Ubuntu_machine:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v2
+    - name: Runs on ubuntu
+      run: lsb_release -a
+  Mac_machine:
+    runs-on: macos-latest
+      - uses: actions/checkout@v2
+    - name: runs on mac
+      run: lsb_release -a 
