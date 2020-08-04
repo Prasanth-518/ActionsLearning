@@ -1,7 +1,7 @@
 name: PullReq
 on: 
   pull_request:
-    [master]
+    branches: [master]
 jobs:
   Ubuntu_machine:
     runs-on: ubuntu-latest
