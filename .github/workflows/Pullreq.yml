@@ -1,0 +1,12 @@
+name: PullReq
+on: 
+  pull_request:
+    type: [labeled]
+    branches: [master]
+jobs:
+  Ubuntu_machine:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Runs on ubuntu
+      run: lsb_release -a 
